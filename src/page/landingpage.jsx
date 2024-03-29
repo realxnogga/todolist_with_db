@@ -167,7 +167,7 @@ export const LandingPage = () => {
     return (
         <div className="relative bg-gray-900 h-screen w-screen flex items-center justify-center">
             <div className="h-[90%] w-[45rem] max-w-[95%] flex flex-col justify-start gap-y-5">
-               <p className="text-2xl text-gray-300">Todo List</p>
+             
                 <section className="bg-gray-800 z-10 h-[3.5rem] min-h-[3.5rem] w-full rounded-t-xl">
                     <div className="h-full w-full flex items-center justify-between ">
                         <div className="w-[5rem] h-full flex items-center justify-center">
