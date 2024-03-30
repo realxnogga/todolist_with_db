@@ -48,7 +48,7 @@ export const PutDataThunk = createAsyncThunk(
     'PutDataSliceName/PutdataThunk',
     async (passedData) => {
         try {
-            const res = await fetch('http://todolist123.getenjoyment.net/index.php?action=putData', {
+            const res = await fetch('http://localhost/todolist/server/index.php?action=putData', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(passedData),
@@ -65,7 +65,7 @@ export const GetDataThunk = createAsyncThunk(
     'PutDataSliceName/GetDataThunk',
     async (whatStatus) => {
         try {
-            const res = await fetch('http://todolist123.getenjoyment.net/index.php?action=getData', {
+            const res = await fetch('http://localhost/todolist/server/index.php?action=getData', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(whatStatus),
@@ -82,7 +82,7 @@ export const DeleteDataThunk = createAsyncThunk(
     'PutDataSliceName/DeleteDataThunk',
     async (ID) => {
         try {
-            const res = await fetch('http://todolist123.getenjoyment.net/index.php?action=deleteData', {
+            const res = await fetch('http://localhost/todolist/server/index.php?action=deleteData', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(ID),
@@ -99,7 +99,7 @@ export const EditDataThunk = createAsyncThunk(
     'PutDataSliceName/EditDataThunk',
     async (passedData) => {
         try {
-            const res = await fetch('http://todolist123.getenjoyment.net/index.php?action=editData', {
+            const res = await fetch('http://localhost/todolist/server/index.php?action=editData', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(passedData),
