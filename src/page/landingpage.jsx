@@ -66,11 +66,18 @@ export const LandingPage = () => {
         setData({ ...data, [name]: value });
     };
 
+    const date = new Date();
+
+    const time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+    const fullDate = date.toDateString() + ' / ' + time;;
+
     const PutDataFunc = () => {
 
         dispatch(PutDataThunk({
             text: data.text,
             status: data.status,
+            date: fullDate,
         }));
 
     }

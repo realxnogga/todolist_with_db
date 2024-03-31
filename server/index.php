@@ -1,16 +1,10 @@
 
 <?php
 
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "todolistdb";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli("sql309.infinityfree.com", "if0_36263692", "8VXv3s3tQlQh", "if0_36263692_todolistdb");
 
 // Check connection
 if ($conn->connect_error) {
@@ -27,9 +21,10 @@ if (isset($_GET['action'])) {
 
             $text = $data['text'];
             $status = $data['status'];
+            $date = $data['date'];
 
             if ($text != '' && $status != '') {
-                $sql = "insert into todolisttb (text, status) values ('$text', '$status')";
+                $sql = "insert into todolisttb (text, status, date) values ('$text', '$status', '$date')";
 
                 $conn->query($sql);
 
